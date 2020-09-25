@@ -9,7 +9,7 @@ This application allows students to report how many hours or how much effort the
 1. Student reporting a class (A)
 2. Student using that report (B)
 
-## Release 1 Target
+## Release 1 / ShellHacks Target
 Epic 1: Student A can enter estimates for classes taken in the past.
 Epic 2: Student B can use estimates to enter the name of classes and get the estimated time they require.
 Epic 3: Student B can add classes and estimates to a cart and then see the cart and the total amount of hours.

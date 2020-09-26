@@ -19,15 +19,20 @@ This application allows students to report how many hours or how much effort the
             - space to enter course code
             - spce to enter number of hours per week
             - button to submit
+    - [ ] Story #3: Save response to database using CoreData and CloudKit
+    - [ ] Story #4: Create CordData data model with:
+            - entity "Course"
+            - attributes "Course numnber", "Number of hours", and "Number of ratings"
 - Epic 2: Student B can use estimates to enter the name of classes and get the estimated time they require.
-     - [ ] Story #3: Create "Check Class" screen with
+     - [ ] Story #5: Create "Check Class" screen with
             - space to enter course code
             - label to show number of hours per week
+     - [ ] Story #6: Read records from database using CoreData
 - Epic 3: Student B can add classes and estimates to a cart and then see the cart and the total amount of hours.
-     - [ ] Story #4: Modify "Check Class" screen by
+     - [ ] Story #7: Modify "Check Class" screen by
             - adding "Add To Cart" button
             - adding "See Cart" button
-     - [ ] Story #5: Create "Cart" screen with
+     - [ ] Story #8: Create "Cart" screen with
             - scrollable list of classes and their hours
             - button to remove class next to each class
             - label to show total number of hours

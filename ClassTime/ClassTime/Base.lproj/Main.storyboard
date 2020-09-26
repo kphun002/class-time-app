@@ -109,25 +109,91 @@
         <!--Submission Screen Controller-->
         <scene sceneID="186-Sn-eUP">
             <objects>
-                <viewController title="Submission Screen Controller" id="DEc-qF-o0h" sceneMemberID="viewController">
+                <viewController title="Submission Screen Controller" id="DEc-qF-o0h" customClass="SubmissionViewController" customModule="ClassTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4nl-Ey-7qc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Submission Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fb7-kE-1xm">
-                                <rect key="frame" x="118" y="347" width="146" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="XEg-vy-Pf0">
+                                <rect key="frame" x="65" y="189" width="284" height="485"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rP-UI-yxa">
+                                        <rect key="frame" x="0.0" y="0.0" width="284" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="example: COP 4555" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4qZ-3u-pv6">
+                                        <rect key="frame" x="0.0" y="115.5" width="284" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="DEc-qF-o0h" id="EU2-GG-Wsj"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours/Week" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tck-aV-6Hr">
+                                        <rect key="frame" x="0.0" y="221.5" width="284" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="example: 10 " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ys3-g5-OmT">
+                                        <rect key="frame" x="0.0" y="337" width="284" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="DEc-qF-o0h" id="6jC-5z-a1m"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmY-AL-Oud">
+                                        <rect key="frame" x="0.0" y="443" width="284" height="42"/>
+                                        <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Submit">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="submitPressed:" destination="DEc-qF-o0h" eventType="touchUpInside" id="7rA-kB-DLj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMc-lh-CeE">
+                                <rect key="frame" x="65" y="778" width="284" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vtP-eT-G35"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="XEg-vy-Pf0" firstAttribute="leading" secondItem="vtP-eT-G35" secondAttribute="leading" constant="65" id="3Dy-m4-axq"/>
+                            <constraint firstItem="XEg-vy-Pf0" firstAttribute="top" secondItem="vtP-eT-G35" secondAttribute="top" constant="101" id="D27-Po-Di7"/>
+                            <constraint firstItem="vtP-eT-G35" firstAttribute="trailing" secondItem="eMc-lh-CeE" secondAttribute="trailing" constant="65" id="Rik-Zg-QT5"/>
+                            <constraint firstItem="vtP-eT-G35" firstAttribute="bottom" secondItem="XEg-vy-Pf0" secondAttribute="bottom" constant="188" id="Vqb-F5-eIe"/>
+                            <constraint firstItem="vtP-eT-G35" firstAttribute="bottom" secondItem="eMc-lh-CeE" secondAttribute="bottom" constant="60" id="Wbv-Eq-tMH"/>
+                            <constraint firstItem="vtP-eT-G35" firstAttribute="trailing" secondItem="XEg-vy-Pf0" secondAttribute="trailing" constant="65" id="Z4S-fZ-7rN"/>
+                            <constraint firstItem="eMc-lh-CeE" firstAttribute="leading" secondItem="vtP-eT-G35" secondAttribute="leading" constant="65" id="v0y-Ex-2eF"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="vZO-5e-HTv" appends="YES" id="j8b-c7-c3s"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Wcm-aA-Y8u"/>
+                    <connections>
+                        <outlet property="courseCodeField" destination="4qZ-3u-pv6" id="6TI-yX-0dD"/>
+                        <outlet property="errorLabel" destination="eMc-lh-CeE" id="IOY-Un-Anv"/>
+                        <outlet property="hoursField" destination="Ys3-g5-OmT" id="0Xz-24-WES"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BKp-dr-I4j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="vZO-5e-HTv">
+                    <connections>
+                        <action selector="backGroundTap:" destination="DEc-qF-o0h" id="Bhf-kc-si7"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1773.913043478261" y="-466.07142857142856"/>
         </scene>
@@ -151,8 +217,17 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -12,6 +12,8 @@ class SubmissionViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var courseCodeField: UITextField!
     @IBOutlet weak var hoursField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
+    let myCourseInfoModel = CourseInfoModel.sharedCourseInstance
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -33,10 +35,11 @@ class SubmissionViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
         errorLabel.isHidden = true
     }
+    
     @IBAction func backGroundTap(_ sender: Any) {
         hoursField.resignFirstResponder()
         courseCodeField.resignFirstResponder()
@@ -45,13 +48,25 @@ class SubmissionViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func submitPressed(_ sender: Any) {
         if !validateFields(){
+            errorLabel.textColor = UIColor.red
             errorLabel.isHidden = false
             errorLabel.text = "Please fill all fields"
             errorLabel.errorShake()
         }
+        else if !validateCourse(field: courseCodeField.text!){
+            errorLabel.textColor = UIColor.red
+            errorLabel.isHidden = false
+            errorLabel.text = "Please enter a valid course ID"
+            errorLabel.errorShake()
+        }
         else{
-            errorLabel.isHidden = true
             //add field to DB
+            myCourseInfoModel.newSubmittion(courseID: courseCodeField.text!, userHours: Int(hoursField.text!)!)
+            errorLabel.textColor = UIColor.green
+            errorLabel.isHidden = false
+            errorLabel.text = "Thank you for your submission!"
+            errorLabel.errorShake()
+            
         }
     }
     
@@ -60,12 +75,11 @@ class SubmissionViewController: UIViewController, UITextFieldDelegate {
 extension SubmissionViewController {
     
     func validateFields() -> Bool{
-        if (courseCodeField.text!.isEmpty || hoursField.text!.isEmpty){
-            return false
-        }
-        else {
-            return true
-        }
+        return !(courseCodeField.text!.isEmpty || hoursField.text!.isEmpty)
+    }
+    
+    func validateCourse(field: String) -> Bool{
+        return myCourseInfoModel.checkCourseID(courseName: field)
     }
     
 }

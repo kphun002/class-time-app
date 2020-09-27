@@ -19,6 +19,11 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
         
         scheduleTableView.delegate = self
         scheduleTableView.dataSource = self
+        var courseTotal : Double = 0
+        for courses in coursesInSchedule{
+            courseTotal = courses.value + courseTotal
+        }
+        totalHours.text = String(courseTotal)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

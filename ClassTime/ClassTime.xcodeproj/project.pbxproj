@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4B308F27251FAE9600CD6C58 /* CheckClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B308F26251FAE9600CD6C58 /* CheckClassViewController.swift */; };
+		4B919DD0252028BF00B6B2A7 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B919DCF252028BF00B6B2A7 /* ScheduleViewController.swift */; };
+		4B919DDD25202BFA00B6B2A7 /* CourseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B919DDC25202BFA00B6B2A7 /* CourseViewCell.swift */; };
 		7D2A1B3F251FD39500054BF4 /* StyleFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A1B3E251FD39500054BF4 /* StyleFields.swift */; };
 		7D2A1B44251FD4A800054BF4 /* SubmissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A1B43251FD4A800054BF4 /* SubmissionViewController.swift */; };
 		7D2A1B4F251FF36A00054BF4 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D2A1B4E251FF36A00054BF4 /* CloudKit.framework */; };
@@ -41,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		4B308F26251FAE9600CD6C58 /* CheckClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckClassViewController.swift; sourceTree = "<group>"; };
+		4B919DCF252028BF00B6B2A7 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		4B919DDC25202BFA00B6B2A7 /* CourseViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewCell.swift; sourceTree = "<group>"; };
 		7D2A1B3E251FD39500054BF4 /* StyleFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleFields.swift; sourceTree = "<group>"; };
 		7D2A1B43251FD4A800054BF4 /* SubmissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionViewController.swift; sourceTree = "<group>"; };
 		7D2A1B49251FF35E00054BF4 /* ClassTime.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClassTime.entitlements; sourceTree = "<group>"; };
@@ -125,12 +129,14 @@
 				7DCD7649251F05EE00ED391E /* AppDelegate.swift */,
 				7DCD764B251F05EE00ED391E /* SceneDelegate.swift */,
 				7DCD764F251F05EE00ED391E /* Main.storyboard */,
+				4B919DDC25202BFA00B6B2A7 /* CourseViewCell.swift */,
 				7DCD7655251F05F000ED391E /* Assets.xcassets */,
 				7DCD7657251F05F000ED391E /* LaunchScreen.storyboard */,
 				7DCD765A251F05F000ED391E /* Info.plist */,
 				7DCD7652251F05EE00ED391E /* ClassTime.xcdatamodeld */,
 				7D2A1B3E251FD39500054BF4 /* StyleFields.swift */,
 				7D2A1B43251FD4A800054BF4 /* SubmissionViewController.swift */,
+				4B919DCF252028BF00B6B2A7 /* ScheduleViewController.swift */,
 				7D2A1B5D252006E900054BF4 /* CourseInfoModel.swift */,
 			);
 			path = ClassTime;
@@ -287,6 +293,8 @@
 				7D2A1B5E252006E900054BF4 /* CourseInfoModel.swift in Sources */,
 				4B308F27251FAE9600CD6C58 /* CheckClassViewController.swift in Sources */,
 				7DCD764A251F05EE00ED391E /* AppDelegate.swift in Sources */,
+				4B919DDD25202BFA00B6B2A7 /* CourseViewCell.swift in Sources */,
+				4B919DD0252028BF00B6B2A7 /* ScheduleViewController.swift in Sources */,
 				7D2A1B44251FD4A800054BF4 /* SubmissionViewController.swift in Sources */,
 				7DCD764C251F05EE00ED391E /* SceneDelegate.swift in Sources */,
 				7DCD7654251F05EE00ED391E /* ClassTime.xcdatamodeld in Sources */,

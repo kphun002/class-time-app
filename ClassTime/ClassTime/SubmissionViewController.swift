@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import SearchTextField
 
 class SubmissionViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var courseCodeField: UITextField!
+    @IBOutlet weak var courseCodeField: SearchTextField!
     @IBOutlet weak var hoursField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     let myCourseInfoModel = CourseInfoModel.sharedCourseInstance
@@ -18,7 +19,13 @@ class SubmissionViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         errorLabel.isHidden = true
+        var registeredCourses: [String] = []
+        for course in myCourseInfoModel.courses {
+            registeredCourses.append(course.key)
+        }
+        courseCodeField.filterStrings(registeredCourses)
     }
+    
     
 
     /*

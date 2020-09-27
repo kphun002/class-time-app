@@ -13,6 +13,7 @@ class CheckClassViewController: UIViewController {
     @IBOutlet weak var courseCode: SearchTextField!
     @IBOutlet weak var hours: UILabel!
     @IBOutlet weak var addToSchedule: UIButton!
+    @IBOutlet weak var errorLabel: UILabel!
     
     var selectedCourses: [String:Double] = [:]
     
@@ -20,6 +21,7 @@ class CheckClassViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        errorLabel.isHidden = true
 
         var registeredCourses: [String] = []
         for course in myCourseInfoModel.courses {
@@ -29,12 +31,34 @@ class CheckClassViewController: UIViewController {
     }
     
     @IBAction func tapOnSearchCourse(_ sender: Any) {
-        hours.text = String(myCourseInfoModel.averageForCourse(courseName: courseCode.text!))
+        
+        hours.text = "0"
+        
+        if !validateCourse(field: courseCode.text!){
+            errorLabel.textColor = UIColor.red
+            errorLabel.isHidden = false
+            errorLabel.text = "Please enter a valid course ID"
+            errorLabel.errorShake()
+        }
+        else {
+            hours.text = String(myCourseInfoModel.averageForCourse(courseName: courseCode.text!))
+            errorLabel.isHidden = true
+        }
     }
     
     @IBAction func tapOnAddToSchedule(_ sender: Any) {
+        if ((hours.text == "0") || !validateCourse(field: courseCode.text!)) {
+            errorLabel.text = "Course or hours invalid"
+            errorLabel.textColor = UIColor.red
+            errorLabel.isHidden = false
+            errorLabel.errorShake()
+        }
+        else {
         selectedCourses[courseCode.text!] = Double(hours.text!)
-        print(selectedCourses)
+        errorLabel.isHidden = false
+        errorLabel.textColor = UIColor.green
+        errorLabel.text = "Class added!"
+        }
     }
     
     /*
@@ -48,3 +72,11 @@ class CheckClassViewController: UIViewController {
     }
 
 }
+
+extension CheckClassViewController {
+    func validateCourse(field: String) -> Bool{
+        return myCourseInfoModel.checkCourseID(courseName: field)
+    }
+}
+
+

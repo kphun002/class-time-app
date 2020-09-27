@@ -5,7 +5,7 @@ Class Schedule is an application for students to report and check the time speci
 
 This application allows students to report how many hours or how much effort they had to dedicate to classes in past semesters. Then, other students can use those estimates to plan their schedule for the next semester. 
 
-By offering estimates of effort per class, this website allows students to calculate how many and which specific classes they should take depending on their available time for the next semester. 
+By offering estimates of effort per class, this application allows students to calculate how many and which specific classes they should take depending on their available time for the next semester. 
 
 If the available time is flexible and the students already have specific classes in mind that they want to take, then, they can use the website to estimate how many hours they will need to dedicate to each class and to the school in general during that semester.
 

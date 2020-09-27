@@ -38,7 +38,8 @@ final class CourseInfoModel {
         print(courses[courseID]!)
     }
     
-    
-    
-    
+    //calculate average for requested course
+    func averageForCourse(courseName: String) -> Double{
+        return Double(courses[courseName]!.hours / courses[courseName]!.ratings)
+    }
 }

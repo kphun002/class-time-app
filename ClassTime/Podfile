@@ -1,0 +1,15 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '14.0'
+
+target 'ClassTime' do
+  use_frameworks!
+
+  pod "SearchTextField"
+
+  target 'ClassTimeTests' do
+    inherit! :search_paths
+  end
+
+  target 'ClassTimeUITests' do
+  end
+end

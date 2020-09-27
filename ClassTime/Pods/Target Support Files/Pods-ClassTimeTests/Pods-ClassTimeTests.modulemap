@@ -1,0 +1,6 @@
+framework module Pods_ClassTimeTests {
+  umbrella header "Pods-ClassTimeTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

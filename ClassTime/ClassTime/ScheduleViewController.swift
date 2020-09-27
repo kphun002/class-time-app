@@ -12,7 +12,7 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var scheduleTableView: UITableView!
     @IBOutlet weak var totalHours: UILabel!
     
-    var coursesInSchedule: [String:Int] = [:]
+    var coursesInSchedule: [String:Double] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()

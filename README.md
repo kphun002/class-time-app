@@ -1,9 +1,13 @@
 # class-time-app
-Class Time is an application for students to report and check the time/effort specific classes take.  
+Class Schedule is an application for students to report and check the time specific classes take.  
 
 ## Overview
 
-This application allows students to report how many hours or how much effort they had to dedicate to classes in past semesters. Then, other students can use those estimates to plan their schedule for the next semester. By offering estimates of effort per class, this website allows students to calculate how many and which specific classes they should take depending on their available time for the next semester. If the available time is flexible and the students already have specific classes in mind that they want to take, then, they can use the website to estimate how many hours they will need to dedicate to each class to the school in general during that semester.
+This application allows students to report how many hours or how much effort they had to dedicate to classes in past semesters. Then, other students can use those estimates to plan their schedule for the next semester. 
+
+By offering estimates of effort per class, this website allows students to calculate how many and which specific classes they should take depending on their available time for the next semester. 
+
+If the available time is flexible and the students already have specific classes in mind that they want to take, then, they can use the website to estimate how many hours they will need to dedicate to each class and to the school in general during that semester.
 
 ## Roles
 - Student reporting a class (A)
@@ -19,10 +23,10 @@ This application allows students to report how many hours or how much effort the
             - space to enter course code
             - spce to enter number of hours per week
             - button to submit
-    - [ ] Story #3: Save response to database using CoreData and CloudKit
-    - [ ] Story #4: Create CordData data model with:
+    - [ ] Story #3: Create modal class with:
             - entity "Course"
             - attributes "Course numnber", "Number of hours", and "Number of ratings"
+    - [ ] Story #4: Save response to modal class
 - Epic 2: Student B can use estimates to enter the name of classes and get the estimated time they require.
      - [ ] Story #5: Create "Check Class" screen with
             - space to enter course code
@@ -39,7 +43,7 @@ This application allows students to report how many hours or how much effort the
 
 ## Assumptions that need to be validated
 -	Students like having an idea of how much effort they will need to put in a class before enrolling it.
--	Students are willing to take the time to report classes taken in the past
--	Students are willing to trust the estimates offered by other students
+-	Students are willing to take the time to report classes taken in the past.
+-	Students are willing to trust the estimates offered by other students.
 
 

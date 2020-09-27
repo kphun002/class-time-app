@@ -15,30 +15,29 @@ If the available time is flexible and the students already have specific classes
 
 ## Release 1 / ShellHacks Target
 - Epic 1: Student A can enter estimates for classes taken in the past.
-    - [ ] Story #1: Create "Welcome" screen with
+    - [X] Story #1: Create "Welcome" screen with
             - welcome message
             - button to rate a class
             - button to check a class
-    - [ ] Story #2: Create "Rate Class" screen with:
+    - [X] Story #2: Create "Rate Class" screen with:
             - space to enter course code
             - spce to enter number of hours per week
             - button to submit
-    - [ ] Story #3: Create modal class with:
+    - [X] Story #3: Create modal class with:
             - entity "Course"
             - attributes "Course numnber", "Number of hours", and "Number of ratings"
-    - [ ] Story #4: Save response to modal class
+    - [X] Story #4: Save response to modal class
 - Epic 2: Student B can use estimates to enter the name of classes and get the estimated time they require.
-     - [ ] Story #5: Create "Check Class" screen with
+     - [X] Story #5: Create "Check Class" screen with
             - space to enter course code
             - label to show number of hours per week
-     - [ ] Story #6: Read records from database using CoreData
+     - [X] Story #6: Read records from modal class
 - Epic 3: Student B can add classes and estimates to a cart and then see the cart and the total amount of hours.
-     - [ ] Story #7: Modify "Check Class" screen by
+     - [X] Story #7: Modify "Check Class" screen by
             - adding "Add To Cart" button
             - adding "See Cart" button
-     - [ ] Story #8: Create "Cart" screen with
+     - [X] Story #8: Create "Cart" screen with
             - scrollable list of classes and their hours
-            - button to remove class next to each class
             - label to show total number of hours
 
 ## Assumptions that need to be validated

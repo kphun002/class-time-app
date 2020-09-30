@@ -11,7 +11,6 @@ class CourseViewCell: UITableViewCell {
 
     @IBOutlet weak var courseCode: UILabel!
     @IBOutlet weak var hours: UILabel!
-    @IBOutlet weak var delete: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,4 +23,7 @@ class CourseViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func tapOnRemove(_ sender: Any) {
+        
+    }
 }

@@ -13,7 +13,9 @@ class CheckClassViewController: UIViewController {
     @IBOutlet weak var courseCode: SearchTextField!
     @IBOutlet weak var hours: UILabel!
     @IBOutlet weak var addToSchedule: UIButton!
+    @IBOutlet weak var seeSchedule: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var searchButton: UIButton!
     
     var selectedCourses: [String:Double] = [:]
     
@@ -21,6 +23,9 @@ class CheckClassViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchButton.layer.cornerRadius = 8.0
+        addToSchedule.layer.cornerRadius = 10.0
+        seeSchedule.layer.cornerRadius = 10.0
         errorLabel.isHidden = true
 
         var registeredCourses: [String] = []

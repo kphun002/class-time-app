@@ -13,11 +13,13 @@ class SubmissionViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var courseCodeField: SearchTextField!
     @IBOutlet weak var hoursField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var submitButton: UIButton!
     let myCourseInfoModel = CourseInfoModel.sharedCourseInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        submitButton.layer.cornerRadius = 10.0
         errorLabel.isHidden = true
         var registeredCourses: [String] = []
         for course in myCourseInfoModel.courses {
@@ -64,6 +66,12 @@ class SubmissionViewController: UIViewController, UITextFieldDelegate {
             errorLabel.textColor = UIColor.red
             errorLabel.isHidden = false
             errorLabel.text = "Please enter a valid course ID"
+            errorLabel.errorShake()
+        }
+        else if Int(hoursField.text!)! > 40 {
+            errorLabel.textColor = UIColor.red
+            errorLabel.isHidden = false
+            errorLabel.text = "Please enter a valid number of hours"
             errorLabel.errorShake()
         }
         else{

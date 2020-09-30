@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		4B308F27251FAE9600CD6C58 /* CheckClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B308F26251FAE9600CD6C58 /* CheckClassViewController.swift */; };
 		4B919DD0252028BF00B6B2A7 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B919DCF252028BF00B6B2A7 /* ScheduleViewController.swift */; };
 		4B919DDD25202BFA00B6B2A7 /* CourseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B919DDC25202BFA00B6B2A7 /* CourseViewCell.swift */; };
+		4B919E2025243E9400B6B2A7 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B919E1F25243E9400B6B2A7 /* WelcomeViewController.swift */; };
 		7D2A1B3F251FD39500054BF4 /* StyleFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A1B3E251FD39500054BF4 /* StyleFields.swift */; };
 		7D2A1B44251FD4A800054BF4 /* SubmissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A1B43251FD4A800054BF4 /* SubmissionViewController.swift */; };
 		7D2A1B4F251FF36A00054BF4 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D2A1B4E251FF36A00054BF4 /* CloudKit.framework */; };
@@ -50,6 +51,7 @@
 		4B308F26251FAE9600CD6C58 /* CheckClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckClassViewController.swift; sourceTree = "<group>"; };
 		4B919DCF252028BF00B6B2A7 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		4B919DDC25202BFA00B6B2A7 /* CourseViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewCell.swift; sourceTree = "<group>"; };
+		4B919E1F25243E9400B6B2A7 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		5A4DAF2B5FE911993B2E9795 /* Pods-ClassTimeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClassTimeTests.release.xcconfig"; path = "Target Support Files/Pods-ClassTimeTests/Pods-ClassTimeTests.release.xcconfig"; sourceTree = "<group>"; };
 		631ECF3B52B25BE8FF3A0744 /* Pods-ClassTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClassTime.release.xcconfig"; path = "Target Support Files/Pods-ClassTime/Pods-ClassTime.release.xcconfig"; sourceTree = "<group>"; };
 		7D2A1B3E251FD39500054BF4 /* StyleFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleFields.swift; sourceTree = "<group>"; };
@@ -117,7 +119,6 @@
 				C4B10CDD79755B16DFFC01A4 /* Pods-ClassTimeTests.debug.xcconfig */,
 				5A4DAF2B5FE911993B2E9795 /* Pods-ClassTimeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -159,6 +160,7 @@
 			children = (
 				7D2A1B49251FF35E00054BF4 /* ClassTime.entitlements */,
 				4B308F26251FAE9600CD6C58 /* CheckClassViewController.swift */,
+				4B919E1F25243E9400B6B2A7 /* WelcomeViewController.swift */,
 				7DCD7649251F05EE00ED391E /* AppDelegate.swift */,
 				7DCD764B251F05EE00ED391E /* SceneDelegate.swift */,
 				7DCD764F251F05EE00ED391E /* Main.storyboard */,
@@ -432,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D2A1B5E252006E900054BF4 /* CourseInfoModel.swift in Sources */,
+				4B919E2025243E9400B6B2A7 /* WelcomeViewController.swift in Sources */,
 				4B308F27251FAE9600CD6C58 /* CheckClassViewController.swift in Sources */,
 				7DCD764A251F05EE00ED391E /* AppDelegate.swift in Sources */,
 				4B919DDD25202BFA00B6B2A7 /* CourseViewCell.swift in Sources */,

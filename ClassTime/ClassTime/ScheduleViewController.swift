@@ -17,6 +17,7 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        scheduleTableView.tableFooterView = UIView()
         scheduleTableView.delegate = self
         scheduleTableView.dataSource = self
         var courseTotal : Double = 0

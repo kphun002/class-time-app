@@ -28,8 +28,6 @@ class SubmissionViewController: UIViewController, UITextFieldDelegate {
         courseCodeField.filterStrings(registeredCourses)
     }
     
-    
-
     /*
     // MARK: - Navigation
 

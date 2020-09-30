@@ -38,6 +38,7 @@ class CheckClassViewController: UIViewController {
     @IBAction func tapOnSearchCourse(_ sender: Any) {
         
         hours.text = "0"
+        errorLabel.isHidden = true
         
         if !validateCourse(field: courseCode.text!){
             errorLabel.textColor = UIColor.red
@@ -47,7 +48,6 @@ class CheckClassViewController: UIViewController {
         }
         else {
             hours.text = String(myCourseInfoModel.averageForCourse(courseName: courseCode.text!))
-            errorLabel.isHidden = true
         }
     }
     
@@ -72,10 +72,12 @@ class CheckClassViewController: UIViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let scheduleViewController = segue.destination as? ScheduleViewController
-        scheduleViewController?.coursesInSchedule = selectedCourses
+        errorLabel.isHidden = true
+        if let scheduleViewController = segue.destination as? ScheduleViewController {
+            scheduleViewController.coursesInSchedule = selectedCourses
+            scheduleViewController.delegate = self
+        }
     }
-
 }
 
 extension CheckClassViewController {
@@ -84,4 +86,12 @@ extension CheckClassViewController {
     }
 }
 
+extension CheckClassViewController: ScheduleViewControllerDelegate {
+    
+    // MARK: - ScheduleViewControllerDelegate
+    
+    func didDeleteRowAt(index: Int) {
+        selectedCourses.removeValue(forKey: Array(selectedCourses.keys)[index])
+    }
+}
 
